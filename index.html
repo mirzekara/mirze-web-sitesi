@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirze | Kişisel Web Sitesi</title>
+<link rel="icon" type="image/jpeg" href="resimler/mirze.png.jpeg">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #061426;
+    color: white;
+    text-align: center;
+}
+nav {
+    padding: 25px;
+    background: #0b2340;
+    box-shadow: 0 0 20px #008cff;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #00bfff;
+}
+.hero {
+    min-height: 85vh;
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: radial-gradient(circle, #123d69, #061426 70%);
+    animation: gel 2s ease;
+}
+h1 {
+    font-size: 65px;
+    color: #00bfff;
+    text-shadow: 0 0 20px #008cff;
+}
+p {
+    font-size: 21px;
+    margin: 20px;
+}
+button {
+    padding: 15px 35px;
+    background: #008cff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #008cff;
+    transition: 0.4s;
+}
+button:hover {
+    transform: scale(1.15);
+    background: #00bfff;
+}
+@keyframes gel {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00bfff;
+    box-shadow: 0 0 30px #008cff;
+    margin-bottom: 25px;
+    animation: gel 2s ease;
+}
+.avatar {
+animation: neon 2s infinite alternate, gel 2s ease;
+border: 4px solid #00bfff;
+box-shadow: 0 0 15px #00bfff, 0 0 30px #008cff;
+}
+
+@keyframes neon {
+from {
+box-shadow: 0 0 10px #00bfff, 0 0 20px #008cff;
+}
+to {
+box-shadow: 0 0 25px #00ffff, 0 0 50px #008cff, 0 0 70px #00bfff;
+}
+}
+.yildizlar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: -1;
+background-image:
+radial-gradient(2px 2px at 20% 30%, white, transparent),
+radial-gradient(2px 2px at 70% 60%, #00bfff, transparent),
+radial-gradient(2px 2px at 40% 80%, white, transparent),
+radial-gradient(3px 3px at 90% 20%, #00bfff, transparent);
+background-size: 200px 200px;
+animation: yildizHareket 10s linear infinite;
+}
+
+@keyframes yildizHareket {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 200px 200px;
+}
+}
+.yazi {
+color: #00bfff;
+font-size: 22px;
+text-shadow: 0 0 10px #00bfff;
+overflow: hidden;
+white-space: nowrap;
+border-right: 3px solid #00bfff;
+width: 0;
+animation: yazBelir 5s steps(48) forwards,
+imlec 0.7s infinite;
+}
+
+@keyframes yazBelir {
+from { width: 0; }
+to { width: 100%; }
+}
+
+@keyframes imlec {
+50% { border-color: transparent; }
+}
+nav a {
+display: inline-block;
+color: #00bfff;
+text-decoration: none;
+padding: 12px 22px;
+margin: 8px;
+border: 2px solid #00bfff;
+border-radius: 12px;
+transition: 0.4s;
+}
+
+nav a:hover {
+background-color: #00bfff;
+color: #001020;
+box-shadow: 0 0 10px #00bfff,
+0 0 25px #00bfff,
+0 0 45px #008cff;
+transform: scale(1.1);
+}
+.fare-isigi {
+position: fixed;
+width: 12px;
+height: 12px;
+background: #00bfff;
+border-radius: 50%;
+box-shadow: 0 0 10px #00bfff,
+0 0 25px #008cff;
+pointer-events: none;
+z-index: 9999;
+transform: translate(-50%, -50%);
+animation: isikKaybol 0.6s forwards;
+}
+
+@keyframes isikKaybol {
+to {
+opacity: 0;
+transform: translate(-50%, -50%) scale(3);
+}
+}
+
+@media (max-width: 768px) {
+body {
+padding: 10px;
+}
+
+h1 {
+    font-size: 26px;
+}
+h2 {
+   h2.yazi {
+    font-size: 18px;
+    white-space: nowrap;
+    width: 100%;
+    animation: yazBelir 5s steps(48) forwards,
+               imlec 0.7s infinite;
+}
+}
+.avatar {
+    width: 160px;
+    height: 160px;
+}
+nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    margin: 5px;
+    font-size: 14px;
+}
+.hero {
+    width: 100%;
+    padding: 15px;
+}
+
+}
+/* Telefon ve tablet uyumu */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+footer {
+    background: #0b2340;
+    color: #00bfff;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 20px #008cff;
+    font-size: 15px;
+}
+.yukari {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: #008cff;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #00bfff;
+    z-index: 1000;
+    transition: 0.3s;
+}
+.yukari:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px #00ffff;
+}
+body {
+    animation: sayfaAc 1.2s ease;
+}
+
+@keyframes sayfaAc {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+</style>
+
+</head>
+<body>
+  <div class="yildizlar"></div>  
+<nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimda.html">Hakkımda</a>
+    <a href="iletisim.html">İletişim</a>
+</nav>
+<div class="hero">
+    <img src="resimler/mirze.png.jpeg" class="avatar">
+    <h1>MERHABA, BEN MİRZE!</h1>
+    <h2 class="yazi">HAYALLERİMİ KODLARLA GERÇEĞE DÖNÜŞTÜRÜYORUM ⚡</h2>
+<p>Teknoloji dünyama hoş geldin.</p>
+<p>Hayallerimi ve hedeflerimi keşfetmeye hazır mısın?</p>
+<button onclick="location.href='hakkimda.html'">
+    Beni Keşfet
+</button>
+</div>
+<script>
+document.addEventListener("mousemove", function(e) {
+    const isik = document.createElement("div");
+
+    isik.className = "fare-isigi";
+    isik.style.left = e.clientX + "px";
+    isik.style.top = e.clientY + "px";
+
+    document.body.appendChild(isik);
+
+    setTimeout(() => {
+        isik.remove();
+    }, 600);
+});
+</script>
+<footer>
+    <p>© 2026 MİRZE | Tüm Hakları Saklıdır.</p>
+    <a href="https://www.instagram.com/miirzekara/"
+target="_blank">
+📸 Instagram
+</a>
+<br><br>
+
+<a href="https://github.com/Mirzekara"
+target="_blank">
+💻 GitHub
+</a>
+    <p>Hayallerimi Kodlarla Gerçeğe Dönüştürüyorum ⚡</p>
+</footer>
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+class="yukari">
+⬆️ Yukarı Çık
+</button>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirze | Kişisel Web Sitesi</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #061426;
+    color: white;
+    text-align: center;
+}
+nav {
+    padding: 25px;
+    background: #0b2340;
+    box-shadow: 0 0 20px #008cff;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #00bfff;
+}
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: radial-gradient(circle, #123d69, #061426 70%);
+    animation: gel 2s ease;
+}
+h1 {
+    font-size: 65px;
+    color: #00bfff;
+    text-shadow: 0 0 20px #008cff;
+}
+p {
+    font-size: 21px;
+    margin: 20px;
+}
+button {
+    padding: 15px 35px;
+    background: #008cff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #008cff;
+    transition: 0.4s;
+}
+button:hover {
+    transform: scale(1.15);
+    background: #00bfff;
+}
+@keyframes gel {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+<nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimda.html">Hakkımda</a>
+    <a href="iletisim.html">İletişim</a>
+</nav>
+<div class="hero">
+    <h1>MERHABA, BEN MİRZE!</h1>
+<p>Teknoloji dünyama hoş geldin.</p>
+<p>Hayallerimi ve hedeflerimi keşfetmeye hazır mısın?</p>
+<button onclick="location.href='hakkimda.html'">
+    Beni Keşfet
+</button>
+</div>
+</body>
+</html>

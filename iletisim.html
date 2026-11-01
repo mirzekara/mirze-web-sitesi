@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim | Mirze</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #061426;
+    color: white;
+    text-align: center;
+}
+nav {
+    padding: 25px;
+    background: #0b2340;
+    box-shadow: 0 0 20px #008cff;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+}
+nav a:hover {
+    color: #00bfff;
+}
+.kutu {
+    background: #102b49;
+    margin: 80px auto;
+    padding: 40px;
+    width: 65%;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #008cff;
+    animation: gel 1.5s;
+}
+h1 {
+    color: #00bfff;
+    font-size: 45px;
+}
+p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+@keyframes gel {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+form {
+width: 90%;
+max-width: 450px;
+margin: 30px auto;
+display: flex;
+flex-direction: column;
+gap: 18px;
+}
+
+form input,
+form textarea {
+padding: 15px;
+background: #071a30;
+border: 2px solid #00bfff;
+border-radius: 12px;
+color: white;
+font-size: 16px;
+outline: none;
+box-shadow: 0 0 10px #008cff;
+}
+
+form textarea {
+height: 130px;
+resize: vertical;
+}
+
+form button {
+padding: 15px;
+background: #00bfff;
+color: #001020;
+border: none;
+border-radius: 12px;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+}
+
+form button:hover {
+background: white;
+box-shadow: 0 0 20px #00bfff;
+transform: scale(1.05);
+}
+</style>
+</head>
+<div class="hero">
+    <h1>BENİMLE İLETİŞİME GEÇ! 💙</h1>
+<form action="https://formsubmit.co/mirzekaara.72@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Adın" required>
+    <input type="email" name="email" placeholder="E-posta adresin" required>
+    <textarea name="message" placeholder="Mesajını buraya yaz..." required></textarea>
+    <button type="submit">MESAJ GÖNDER 🚀</button>
+</form>
+</div>
+</body>
+</html>
